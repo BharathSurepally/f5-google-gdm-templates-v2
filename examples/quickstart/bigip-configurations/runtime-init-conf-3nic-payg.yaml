@@ -106,31 +106,31 @@ extension_services:
           My_System:
             class: System
             autoPhonehome: true
-            hostname: '{{{HOST_NAME}}}'
+            hostname: 'ddos01.localhost'
           admin:
             class: User
             userType: regular
-            password: '{{{BIGIP_PASSWORD}}}'
+            password: 'Changeit@f5'
             shell: bash
           default:
             class: Route
-            gw: '{{{EXTERNAL_GW}}}'
+            gw: '172.16.10.1'
             network: default
             mtu: 1500
           defaultManagementRoute:
             class: ManagementRoute
             mtu: 1460
             network: default
-            gw: '{{{MGMT_GW}}}'
+            gw: '192.168.0.1'
           externalGwRoute:
             class: Route
             target: external
-            network: '{{{EXTERNAL_GW}}}/32'
+            network: '172.16.10.1/32'
             mtu: 1460
           internalGwRoute:
             class: Route
             target: internal
-            network: '{{{INTERNAL_GW}}}/32'
+            network: '192.168.10.1/32'
             mtu: 1460
           external:
             class: VLAN
@@ -141,7 +141,7 @@ extension_services:
                 tagged: false
           external-self:
             class: SelfIp
-            address: '{{{SELF_IP_EXTERNAL}}}/32'
+            address: '172.16.10.2/32'
             vlan: external
             allowService: none
             trafficGroup: traffic-group-local-only
@@ -154,7 +154,7 @@ extension_services:
                 tagged: false
           internal-self:
             class: SelfIp
-            address: '{{{SELF_IP_INTERNAL}}}/32'
+            address: '192.168.10.2/32'
             vlan: internal
             allowService: none
             trafficGroup: traffic-group-local-only
