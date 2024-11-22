@@ -121,7 +121,7 @@ extension_services:
             shell: bash
           default:
             class: Route
-            gw: 172.16.10.1
+            gw: 10.1.100.1
             network: default
             mtu: 1500
           defaultManagementRoute:
@@ -132,7 +132,7 @@ extension_services:
           externalGwRoute:
             class: Route
             target: external
-            network: 172.16.10.1/32
+            network: 10.1.100.1/32
             mtu: 1460
           internalGwRoute:
             class: Route
@@ -148,7 +148,7 @@ extension_services:
                 tagged: false
           external-self:
             class: SelfIp
-            address: 172.16.10.4/32
+            address: 10.1.100.2/32
             vlan: external
             allowService: none
             trafficGroup: traffic-group-local-only
@@ -161,7 +161,7 @@ extension_services:
                 tagged: false
           internal-self:
             class: SelfIp
-            address: 192.168.10.4/32
+            address: 10.1.200.2/32
             vlan: internal
             allowService: none
             trafficGroup: traffic-group-local-only
