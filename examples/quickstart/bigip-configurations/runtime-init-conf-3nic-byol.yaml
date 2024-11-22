@@ -100,7 +100,7 @@ extension_services:
           My_License:
             class: License
             licenseType: regKey
-            regKey: UGMTP-XYNRI-SLPME-NZYOO-OELLOXT
+            regKey: QEFPH-CQFGK-WIQSH-YCHSU-RQGKTXA
           My_Ntp:
             class: NTP
             servers:
