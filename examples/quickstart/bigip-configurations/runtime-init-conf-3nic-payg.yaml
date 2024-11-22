@@ -106,7 +106,7 @@ extension_services:
           My_System:
             class: System
             autoPhonehome: true
-            hostname: 'ddos01.localhost'
+            hostname: 'ddos02.localhost'
           admin:
             class: User
             userType: regular
@@ -141,7 +141,7 @@ extension_services:
                 tagged: false
           external-self:
             class: SelfIp
-            address: '172.16.10.2/32'
+            address: '172.16.10.3/32'
             vlan: external
             allowService: none
             trafficGroup: traffic-group-local-only
@@ -154,7 +154,7 @@ extension_services:
                 tagged: false
           internal-self:
             class: SelfIp
-            address: '192.168.10.2/32'
+            address: '192.168.10.3/32'
             vlan: internal
             allowService: none
             trafficGroup: traffic-group-local-only
