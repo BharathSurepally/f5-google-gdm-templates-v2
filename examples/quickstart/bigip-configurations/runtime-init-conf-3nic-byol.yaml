@@ -100,7 +100,7 @@ extension_services:
           My_License:
             class: License
             licenseType: regKey
-            regKey: QEFPH-CQFGK-WIQSH-YCHSU-RQGKTXA
+            regKey: BYCGD-XBQIP-KEMPY-FHLBL-KHEWHNZ
           My_Ntp:
             class: NTP
             servers:
@@ -113,7 +113,7 @@ extension_services:
           My_System:
             class: System
             autoPhonehome: true
-            hostname: ddos01.local
+            hostname: waf02.local
           admin:
             class: User
             userType: regular
@@ -148,7 +148,7 @@ extension_services:
                 tagged: false
           external-self:
             class: SelfIp
-            address: 10.1.100.2/32
+            address: 10.1.100.3/32
             vlan: external
             allowService: none
             trafficGroup: traffic-group-local-only
@@ -161,7 +161,7 @@ extension_services:
                 tagged: false
           internal-self:
             class: SelfIp
-            address: 10.1.200.2/32
+            address: 10.1.200.3/32
             vlan: internal
             allowService: none
             trafficGroup: traffic-group-local-only
