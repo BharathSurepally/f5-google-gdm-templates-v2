@@ -48,7 +48,7 @@ extension_services:
           My_System:
             autoPhonehome: true
             class: System
-            hostname: 'failoverwaf02'
+            hostname: 'failoverwaf02.local'
           My_License:
             class: License
             licenseType: regKey
@@ -136,7 +136,7 @@ extension_services:
           My_System:
             autoPhonehome: true
             class: System
-            hostname: 'failoverwaf02'
+            hostname: 'failoverwaf02.local'
           admin:
             class: User
             userType: regular
@@ -199,8 +199,8 @@ extension_services:
             class: DeviceGroup
             type: sync-failover
             members:
-              - 'failoverwaf01'
-              - 'failoverwaf02'
+              - 'failoverwaf01.local'
+              - 'failoverwaf02.local'
             owner: /Common/failoverGroup/members/0
             autoSync: true
             saveOnAutoSync: false
