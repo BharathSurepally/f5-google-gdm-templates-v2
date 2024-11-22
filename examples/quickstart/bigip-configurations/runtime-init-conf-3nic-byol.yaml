@@ -100,7 +100,7 @@ extension_services:
           My_License:
             class: License
             licenseType: regKey
-            regKey: 'UIYQS-FPTDI-HRQOG-QEZTJ-DHQURFP'
+            regKey: UIYQS-FPTDI-HRQOG-QEZTJ-DHQURFP
           My_Ntp:
             class: NTP
             servers:
@@ -113,31 +113,31 @@ extension_services:
           My_System:
             class: System
             autoPhonehome: true
-            hostname: 'ddos01.local'
+            hostname: ddos01.local
           admin:
             class: User
             userType: regular
-            password: 'Changeit@f5'
+            password: Changeit@f5
             shell: bash
           default:
             class: Route
-            gw: '172.16.10.1'
+            gw: 172.16.10.1
             network: default
             mtu: 1500
           defaultManagementRoute:
             class: ManagementRoute
             mtu: 1460
             network: default
-            gw: '192.168.0.1'
+            gw: 192.168.0.1
           externalGwRoute:
             class: Route
             target: external
-            network: '172.16.10.1/32'
+            network: 172.16.10.1/32
             mtu: 1460
           internalGwRoute:
             class: Route
             target: internal
-            network: '192.168.10.1/32'
+            network: 192.168.10.1/32
             mtu: 1460
           external:
             class: VLAN
@@ -148,7 +148,7 @@ extension_services:
                 tagged: false
           external-self:
             class: SelfIp
-            address: '172.16.10.2/32'
+            address: 172.16.10.2/32
             vlan: external
             allowService: none
             trafficGroup: traffic-group-local-only
@@ -161,7 +161,7 @@ extension_services:
                 tagged: false
           internal-self:
             class: SelfIp
-            address: '192.168.10.2/32'
+            address: 192.168.10.2/32
             vlan: internal
             allowService: none
             trafficGroup: traffic-group-local-only
