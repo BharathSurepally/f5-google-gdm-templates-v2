@@ -100,7 +100,7 @@ extension_services:
           My_License:
             class: License
             licenseType: regKey
-            regKey: IXCWD-YOUBZ-BBUJX-KFHKT-BUNPNAE
+            regKey: MUJAN-TKDQC-RWDWX-TIHGR-GQFOGJU
           My_Ntp:
             class: NTP
             servers:
@@ -113,7 +113,7 @@ extension_services:
           My_System:
             class: System
             autoPhonehome: true
-            hostname: waf02.local
+            hostname: ddos01.local
           admin:
             class: User
             userType: regular
@@ -121,7 +121,7 @@ extension_services:
             shell: bash
           default:
             class: Route
-            gw: 10.1.100.1
+            gw: 172.16.10.1
             network: default
             mtu: 1500
           defaultManagementRoute:
@@ -132,12 +132,12 @@ extension_services:
           externalGwRoute:
             class: Route
             target: external
-            network: 10.1.100.1/32
+            network: 172.16.10.1/32
             mtu: 1460
           internalGwRoute:
             class: Route
             target: internal
-            network: 10.1.200.1/32
+            network: 192.168.10.1/32
             mtu: 1460
           external:
             class: VLAN
@@ -148,7 +148,7 @@ extension_services:
                 tagged: false
           external-self:
             class: SelfIp
-            address: 10.1.100.4/32
+            address: 172.16.10.2/32
             vlan: external
             allowService: none
             trafficGroup: traffic-group-local-only
@@ -161,7 +161,7 @@ extension_services:
                 tagged: false
           internal-self:
             class: SelfIp
-            address: 10.1.200.4/32
+            address: 192.168.10.4/32
             vlan: internal
             allowService: none
             trafficGroup: traffic-group-local-only
