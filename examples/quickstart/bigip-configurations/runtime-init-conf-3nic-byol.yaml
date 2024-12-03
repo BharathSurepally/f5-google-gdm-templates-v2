@@ -100,7 +100,7 @@ extension_services:
           My_License:
             class: License
             licenseType: regKey
-            regKey: MUJAN-TKDQC-RWDWX-TIHGR-GQFOGJU
+            regKey: SEPPQ-SLUBH-YJZRQ-EAMKR-BXAKSQV
           My_Ntp:
             class: NTP
             servers:
@@ -137,7 +137,7 @@ extension_services:
           internalGwRoute:
             class: Route
             target: internal
-            network: 192.168.10.1/32
+            network: 10.1.100.1/32
             mtu: 1460
           external:
             class: VLAN
@@ -161,7 +161,7 @@ extension_services:
                 tagged: false
           internal-self:
             class: SelfIp
-            address: 192.168.10.4/32
+            address: 10.1.100.10/32
             vlan: internal
             allowService: none
             trafficGroup: traffic-group-local-only
